@@ -1,0 +1,25 @@
+`__builtin_popcount` to wbudowana funkcja kóra zwraca liczbę ustawionych bitów (jedynek) w podanej wartości całkowitej.
+Jest to wydajna implementacja, która wykorzystuje sprzętowe instrukcje do obliczania liczby jedynek. (Mozesz zerknac sobie na ASEMBLERA)
+
+Na przykład, jeśli użyjesz `__builtin_popcount` dla liczby 5, która w binarnej reprezentacji jest 101, funkcja zwróci wartość 2, ponieważ są dwa bity ustawione na 1.
+
+Przykład użycia `__builtin_popcount`:
+
+```cpp
+#include <iostream>
+
+int main() {
+    int num = 5;
+    int count = __builtin_popcount(num);
+    std::cout << "Liczba jedynek w " << num << ": " << count << std::endl;
+
+    return 0;
+}
+```
+
+Wyjście:
+```
+Liczba jedynek w 5: 2
+```
+
+`__builtin_popcount` jest przydatne w różnych kontekstach, takich jak obliczanie wagi Hamminga, manipulowanie bitami, algorytmy kodowania i inne operacje na bitach.
